@@ -15,6 +15,7 @@ def remove_duplicates(ll: LinkedList) -> LinkedList:
     while(current_node != None):
         if current_node.data in unique_vals:
             previous.next = current_node.next
+            ll.size -= 1
         else:
             unique_vals.add(current_node.data)
             previous = current_node
