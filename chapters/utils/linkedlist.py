@@ -10,6 +10,9 @@ class Node:
     @data.setter
     def data(self, value):
         self._data = value
+    
+    def __repr__(self):
+        return f"Node with value {self.data}"
 
 class LinkedList:
     def __init__(self, data):

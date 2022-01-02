@@ -1,9 +1,6 @@
 ### REMOVE DUPLICATES FROM UNSORTED LINKED LIST ###
 
-import sys
-import os
-sys.path.append(os.path.join(os.getcwd(), ".."))
-
+import __init__
 import unittest
 from utils import LinkedList, Node
 
