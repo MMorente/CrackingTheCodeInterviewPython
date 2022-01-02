@@ -33,7 +33,7 @@ def one_edit(s1: str, s2: str) -> bool:
 def one_away(s1: str, s2: str) -> bool:
     if len(s1) == len(s2):
         return one_replace(s1, s2)
-    elif len(s1)-len(s2) == 1:
+    elif abs(len(s1)-len(s2)) == 1:
         return one_edit(s1, s2)
     else:
         return False
@@ -42,7 +42,7 @@ def one_away(s1: str, s2: str) -> bool:
 class TestOneAway(unittest.TestCase):
 
     def test_examples(self):
-        self.assertTrue(one_away("pale", "ple"))
+        self.assertTrue(one_away("ple", "pale"))
         self.assertTrue(one_away("pales", "pale"))
         self.assertTrue(one_away("pale", "bale"))
         self.assertFalse(one_away("pale", "bake"))
